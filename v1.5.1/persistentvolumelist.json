@@ -1,0 +1,21 @@
+{
+  "description": "PersistentVolumeList is a list of PersistentVolume items.",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "description": "List of persistent volumes. More info: http://kubernetes.io/docs/user-guide/persistent-volumes",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/v1.PersistentVolume"
+      }
+    },
+    "metadata": {
+      "description": "Standard list metadata. More info: http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#types-kinds",
+      "$ref": "#/definitions/unversioned.ListMeta"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

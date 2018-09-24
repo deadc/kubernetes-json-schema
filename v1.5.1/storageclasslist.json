@@ -1,0 +1,21 @@
+{
+  "description": "StorageClassList is a collection of storage classes.",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "description": "Items is the list of StorageClasses",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/v1beta1.StorageClass"
+      }
+    },
+    "metadata": {
+      "description": "Standard list metadata More info: http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#metadata",
+      "$ref": "#/definitions/unversioned.ListMeta"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

@@ -1,0 +1,26 @@
+{
+  "description": "ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole in the global namespace, and adds who information via Subject.",
+  "required": [
+    "subjects",
+    "roleRef"
+  ],
+  "properties": {
+    "metadata": {
+      "description": "Standard object's metadata.",
+      "$ref": "#/definitions/v1.ObjectMeta"
+    },
+    "roleRef": {
+      "description": "RoleRef can only reference a ClusterRole in the global namespace. If the RoleRef cannot be resolved, the Authorizer must return an error.",
+      "$ref": "#/definitions/v1alpha1.RoleRef"
+    },
+    "subjects": {
+      "description": "Subjects holds references to the objects the role applies to.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/v1alpha1.Subject"
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

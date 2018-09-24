@@ -1,0 +1,20 @@
+{
+  "description": "StatefulSetStatus represents the current state of a StatefulSet.",
+  "required": [
+    "replicas"
+  ],
+  "properties": {
+    "observedGeneration": {
+      "description": "most recent generation observed by this StatefulSet.",
+      "type": "integer",
+      "format": "int64"
+    },
+    "replicas": {
+      "description": "Replicas is the number of actual replicas.",
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

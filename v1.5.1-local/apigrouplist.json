@@ -1,0 +1,17 @@
+{
+  "description": "APIGroupList is a list of APIGroup, to allow clients to discover the API at /apis.",
+  "required": [
+    "groups"
+  ],
+  "properties": {
+    "groups": {
+      "description": "groups is a list of APIGroup.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/unversioned.APIGroup"
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

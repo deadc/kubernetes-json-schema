@@ -1,0 +1,68 @@
+{
+  "description": "NodeStatus is information about the current status of a node.",
+  "properties": {
+    "addresses": {
+      "description": "List of addresses reachable to the node. Queried from cloud provider, if available. More info: http://releases.k8s.io/HEAD/docs/admin/node.md#node-addresses",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeAddress"
+      }
+    },
+    "allocatable": {
+      "description": "Allocatable represents the resources of a node that are available for scheduling. Defaults to Capacity.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
+      }
+    },
+    "capacity": {
+      "description": "Capacity represents the total resources of a node. More info: http://kubernetes.io/docs/user-guide/persistent-volumes#capacity for more details.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
+      }
+    },
+    "conditions": {
+      "description": "Conditions is an array of current observed node conditions. More info: http://releases.k8s.io/HEAD/docs/admin/node.md#node-condition",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeCondition"
+      }
+    },
+    "daemonEndpoints": {
+      "description": "Endpoints of daemons running on the Node.",
+      "$ref": "#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeDaemonEndpoints"
+    },
+    "images": {
+      "description": "List of container images on this node",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/io.k8s.kubernetes.pkg.api.v1.ContainerImage"
+      }
+    },
+    "nodeInfo": {
+      "description": "Set of ids/uuids to uniquely identify the node. More info: http://releases.k8s.io/HEAD/docs/admin/node.md#node-info",
+      "$ref": "#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeSystemInfo"
+    },
+    "phase": {
+      "description": "NodePhase is the recently observed lifecycle phase of the node. More info: http://releases.k8s.io/HEAD/docs/admin/node.md#node-phase The field is never populated, and now is deprecated.",
+      "type": "string"
+    },
+    "volumesAttached": {
+      "description": "List of volumes that are attached to the node.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/io.k8s.kubernetes.pkg.api.v1.AttachedVolume"
+      }
+    },
+    "volumesInUse": {
+      "description": "List of attachable volumes in use (mounted) by the node.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

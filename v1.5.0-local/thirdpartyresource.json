@@ -1,0 +1,22 @@
+{
+  "description": "A ThirdPartyResource is a generic representation of a resource, it is used by add-ons and plugins to add new resource types to the API.  It consists of one or more Versions of the api.",
+  "properties": {
+    "description": {
+      "description": "Description is the description of this object.",
+      "type": "string"
+    },
+    "metadata": {
+      "description": "Standard object metadata",
+      "$ref": "#/definitions/v1.ObjectMeta"
+    },
+    "versions": {
+      "description": "Versions are versions for this third party object",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/v1beta1.APIVersion"
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

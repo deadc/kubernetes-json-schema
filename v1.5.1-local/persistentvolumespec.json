@@ -1,0 +1,29 @@
+{
+  "description": "PersistentVolumeSpec is the specification of a persistent volume.",
+  "properties": {
+    "accessModes": {
+      "description": "AccessModes contains all ways the volume can be mounted. More info: http://kubernetes.io/docs/user-guide/persistent-volumes#access-modes",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "capacity": {
+      "description": "A description of the persistent volume's resources and capacity. More info: http://kubernetes.io/docs/user-guide/persistent-volumes#capacity",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/resource.Quantity"
+      }
+    },
+    "claimRef": {
+      "description": "ClaimRef is part of a bi-directional binding between PersistentVolume and PersistentVolumeClaim. Expected to be non-nil when bound. claim.VolumeName is the authoritative bind between PV and PVC. More info: http://kubernetes.io/docs/user-guide/persistent-volumes#binding",
+      "$ref": "#/definitions/v1.ObjectReference"
+    },
+    "persistentVolumeReclaimPolicy": {
+      "description": "What happens to a persistent volume when released from its claim. Valid options are Retain (default) and Recycle. Recycling must be supported by the volume plugin underlying this persistent volume. More info: http://kubernetes.io/docs/user-guide/persistent-volumes#recycling-policy",
+      "type": "string"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

@@ -1,0 +1,21 @@
+{
+  "description": "ClusterRoleList is a collection of ClusterRoles",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "description": "Items is a list of ClusterRoles",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/v1alpha1.ClusterRole"
+      }
+    },
+    "metadata": {
+      "description": "Standard object's metadata.",
+      "$ref": "#/definitions/unversioned.ListMeta"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

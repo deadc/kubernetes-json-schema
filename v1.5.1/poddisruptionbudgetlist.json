@@ -1,0 +1,19 @@
+{
+  "description": "PodDisruptionBudgetList is a collection of PodDisruptionBudgets.",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/v1beta1.PodDisruptionBudget"
+      }
+    },
+    "metadata": {
+      "$ref": "#/definitions/unversioned.ListMeta"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

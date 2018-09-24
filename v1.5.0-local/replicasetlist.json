@@ -1,0 +1,21 @@
+{
+  "description": "ReplicaSetList is a collection of ReplicaSets.",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "description": "List of ReplicaSets. More info: http://kubernetes.io/docs/user-guide/replication-controller",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/v1beta1.ReplicaSet"
+      }
+    },
+    "metadata": {
+      "description": "Standard list metadata. More info: http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#types-kinds",
+      "$ref": "#/definitions/unversioned.ListMeta"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

@@ -1,0 +1,21 @@
+{
+  "description": "EndpointsList is a list of endpoints.",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "description": "List of endpoints.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/v1.Endpoints"
+      }
+    },
+    "metadata": {
+      "description": "Standard list metadata. More info: http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#types-kinds",
+      "$ref": "#/definitions/unversioned.ListMeta"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

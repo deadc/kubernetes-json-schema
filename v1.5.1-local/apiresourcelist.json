@@ -1,0 +1,22 @@
+{
+  "description": "APIResourceList is a list of APIResource, it is used to expose the name of the resources supported in a specific group and version, and if the resource is namespaced.",
+  "required": [
+    "groupVersion",
+    "resources"
+  ],
+  "properties": {
+    "groupVersion": {
+      "description": "groupVersion is the group and version this APIResourceList is for.",
+      "type": "string"
+    },
+    "resources": {
+      "description": "resources contains the name of the resources and if they are namespaced.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/unversioned.APIResource"
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

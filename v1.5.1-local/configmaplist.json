@@ -1,0 +1,21 @@
+{
+  "description": "ConfigMapList is a resource containing a list of ConfigMap objects.",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "description": "Items is the list of ConfigMaps.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/v1.ConfigMap"
+      }
+    },
+    "metadata": {
+      "description": "More info: http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#metadata",
+      "$ref": "#/definitions/unversioned.ListMeta"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

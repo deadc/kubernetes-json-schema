@@ -1,0 +1,21 @@
+{
+  "description": "Network Policy List is a list of NetworkPolicy objects.",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "description": "Items is a list of schema objects.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/v1beta1.NetworkPolicy"
+      }
+    },
+    "metadata": {
+      "description": "Standard list metadata. More info: http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#metadata",
+      "$ref": "#/definitions/unversioned.ListMeta"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

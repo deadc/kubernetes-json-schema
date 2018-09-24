@@ -1,0 +1,19 @@
+{
+  "description": "PersistentVolumeClaim is a user's request for and claim to a persistent volume",
+  "properties": {
+    "metadata": {
+      "description": "Standard object's metadata. More info: http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#metadata",
+      "$ref": "#/definitions/v1.ObjectMeta"
+    },
+    "spec": {
+      "description": "Spec defines the desired characteristics of a volume requested by a pod author. More info: http://kubernetes.io/docs/user-guide/persistent-volumes#persistentvolumeclaims",
+      "$ref": "#/definitions/v1.PersistentVolumeClaimSpec"
+    },
+    "status": {
+      "description": "Status represents the current information/status of a persistent volume claim. Read-only. More info: http://kubernetes.io/docs/user-guide/persistent-volumes#persistentvolumeclaims",
+      "$ref": "#/definitions/v1.PersistentVolumeClaimStatus"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

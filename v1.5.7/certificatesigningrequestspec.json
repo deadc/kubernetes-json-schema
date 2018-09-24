@@ -1,0 +1,28 @@
+{
+  "description": "This information is immutable after the request is created. Only the Request and ExtraInfo fields can be set on creation, other fields are derived by Kubernetes and cannot be modified by users.",
+  "required": [
+    "request"
+  ],
+  "properties": {
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "request": {
+      "description": "Base64-encoded PKCS#10 CSR data",
+      "type": "string",
+      "format": "byte"
+    },
+    "uid": {
+      "type": "string"
+    },
+    "username": {
+      "description": "Information about the requesting user (if relevant) See user.Info interface for details",
+      "type": "string"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

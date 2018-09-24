@@ -1,0 +1,26 @@
+{
+  "description": "DeploymentRollback stores the information required to rollback a deployment.",
+  "required": [
+    "name",
+    "rollbackTo"
+  ],
+  "properties": {
+    "name": {
+      "description": "Required: This must match the Name of a deployment.",
+      "type": "string"
+    },
+    "rollbackTo": {
+      "description": "The config of this deployment rollback.",
+      "$ref": "#/definitions/v1beta1.RollbackConfig"
+    },
+    "updatedAnnotations": {
+      "description": "The annotations to be updated to a deployment",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

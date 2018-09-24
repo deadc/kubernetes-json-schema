@@ -1,0 +1,44 @@
+{
+  "description": "Represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.",
+  "required": [
+    "targetPortal",
+    "iqn",
+    "lun"
+  ],
+  "properties": {
+    "fsType": {
+      "description": "Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: http://kubernetes.io/docs/user-guide/volumes#iscsi",
+      "type": "string"
+    },
+    "iqn": {
+      "description": "Target iSCSI Qualified Name.",
+      "type": "string"
+    },
+    "iscsiInterface": {
+      "description": "Optional: Defaults to 'default' (tcp). iSCSI interface name that uses an iSCSI transport.",
+      "type": "string"
+    },
+    "lun": {
+      "description": "iSCSI target lun number.",
+      "type": "integer",
+      "format": "int32"
+    },
+    "portals": {
+      "description": "iSCSI target portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "readOnly": {
+      "description": "ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.",
+      "type": "boolean"
+    },
+    "targetPortal": {
+      "description": "iSCSI target portal. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).",
+      "type": "string"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

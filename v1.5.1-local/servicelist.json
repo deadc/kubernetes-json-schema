@@ -1,0 +1,21 @@
+{
+  "description": "ServiceList holds a list of services.",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "description": "List of services",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/v1.Service"
+      }
+    },
+    "metadata": {
+      "description": "Standard list metadata. More info: http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#types-kinds",
+      "$ref": "#/definitions/unversioned.ListMeta"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

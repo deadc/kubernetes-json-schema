@@ -1,0 +1,21 @@
+{
+  "description": "CronJobList is a collection of cron jobs.",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "description": "Items is the list of CronJob.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/v2alpha1.CronJob"
+      }
+    },
+    "metadata": {
+      "description": "Standard list metadata More info: http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#metadata",
+      "$ref": "#/definitions/unversioned.ListMeta"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Deprecated. Please use io.k8s.api.admissionregistration.v1alpha1.AdmissionHookClientConfig instead.",
+  "$ref": "#/definitions/io.k8s.api.admissionregistration.v1alpha1.AdmissionHookClientConfig",
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

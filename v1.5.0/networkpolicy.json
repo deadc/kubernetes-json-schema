@@ -1,0 +1,14 @@
+{
+  "properties": {
+    "metadata": {
+      "description": "Standard object's metadata. More info: http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#metadata",
+      "$ref": "#/definitions/v1.ObjectMeta"
+    },
+    "spec": {
+      "description": "Specification of the desired behavior for this NetworkPolicy.",
+      "$ref": "#/definitions/v1beta1.NetworkPolicySpec"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

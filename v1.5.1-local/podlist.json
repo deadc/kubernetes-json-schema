@@ -1,0 +1,21 @@
+{
+  "description": "PodList is a list of Pods.",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "description": "List of pods. More info: http://kubernetes.io/docs/user-guide/pods",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/v1.Pod"
+      }
+    },
+    "metadata": {
+      "description": "Standard list metadata. More info: http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#types-kinds",
+      "$ref": "#/definitions/unversioned.ListMeta"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}

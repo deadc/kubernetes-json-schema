@@ -1,0 +1,19 @@
+{
+  "description": "Deployment enables declarative updates for Pods and ReplicaSets.",
+  "properties": {
+    "metadata": {
+      "description": "Standard object metadata.",
+      "$ref": "#/definitions/v1.ObjectMeta"
+    },
+    "spec": {
+      "description": "Specification of the desired behavior of the Deployment.",
+      "$ref": "#/definitions/v1beta1.DeploymentSpec"
+    },
+    "status": {
+      "description": "Most recently observed status of the Deployment.",
+      "$ref": "#/definitions/v1beta1.DeploymentStatus"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
+}
